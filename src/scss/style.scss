@@ -1,0 +1,376 @@
+// color variants
+@import 'themes-vars.module.scss';
+
+// third-party
+@import '~react-perfect-scrollbar/dist/css/styles.css';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+// ==============================|| LIGHT BOX ||============================== //
+.slick-arrow:before {
+  color: $grey500;
+}
+
+// ==============================|| LIGHT BOX ||============================== //
+// .fullscreen .react-images__blanket {
+//   z-index: 1200;
+// }
+
+// ==============================|| APEXCHART ||============================== //
+
+.apexcharts-legend-series .apexcharts-legend-marker {
+  margin-right: 8px;
+}
+
+// ==============================|| PERFECT SCROLLBAR ||============================== //
+.scrollbar-container {
+  .ps__rail-y {
+    &:hover > .ps__thumb-y,
+    &:focus > .ps__thumb-y,
+    &.ps--clicking .ps__thumb-y {
+      background-color: $grey500;
+      width: 5px;
+    }
+  }
+
+  .ps__thumb-y {
+    background-color: $grey500;
+    border-radius: 6px;
+    width: 5px;
+    right: 0;
+  }
+}
+
+
+
+.scrollbar-container.ps,
+.scrollbar-container > .ps {
+  &.ps--active-y > .ps__rail-y {
+    width: 5px;
+    background-color: transparent !important;
+    z-index: 999;
+
+    &:hover,
+    &.ps--clicking {
+      width: 5px;
+      background-color: transparent;
+    }
+  }
+
+  &.ps--scrolling-y > .ps__rail-y,
+  &.ps--scrolling-x > .ps__rail-x {
+    opacity: 0.4;
+    background-color: transparent;
+  }
+}
+
+// ==============================|| ANIMATION KEYFRAMES ||============================== //
+
+@keyframes wings {
+  50% {
+    transform: translateY(-40px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  53%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translateZ(0);
+  }
+
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -7px, 0);
+  }
+
+  80% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translateZ(0);
+  }
+
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+@keyframes slideY {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  25% {
+    transform: translateY(-10px);
+  }
+
+  75% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes slideX {
+  0%,
+  50%,
+  100% {
+    transform: translateX(0px);
+  }
+
+  25% {
+    transform: translateX(-10px);
+  }
+
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+.hello {
+  background: linear-gradient(rgb(14, 12, 21), rgb(14, 12, 21)) padding-box, linear-gradient(45deg, #00fed0, #fec200) border-box;
+  border: 1px solid transparent;
+  border-radius: 50px;
+}
+
+.hello:hover {
+  background: linear-gradient(rgb(14, 12, 21), rgb(14, 12, 21)) padding-box, linear-gradient(45deg, #fec200, #00fed0) border-box;
+  border: 1px solid transparent;
+  border-radius: 50px;
+}
+
+// ============= | dashboard text animation | =============
+.text-cube {
+  position: relative;
+  width: 600px;
+  height: 100px;
+  margin: 0 auto;
+  perspective: 800px;
+}
+
+.cube {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: animateCube 3s ease-in-out infinite;
+}
+
+.side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white !important;
+  font-size: 72px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+.front-top {
+  transform: rotateX(0deg) translateZ(28px);
+  background-color: white !important;
+}
+
+.front-bottom {
+  transform: rotateX(240deg) translateZ(28px);
+  background-color: white !important;
+}
+
+.top {
+  transform: rotateX(120deg) translateZ(28px);
+  background-color: white !important;
+}
+
+@keyframes animateCube {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  33% {
+    // transform: rotateX(120deg) rotateY(0deg);
+    transform: rotateX(360deg) rotateY(0deg);
+  }
+
+  66% {
+    transform: rotateX(240deg) rotateY(0deg);
+    transform: rotateX(360deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(360deg) rotateY(0deg);
+  }
+}
+.cubespinner {
+  animation-name: spincube;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  // transform-style: preserve-3d;
+  // transform-origin: 30px 30px 0;
+  // width: 36%;
+  // height: 3rem;
+
+  // @screen sm {
+  //   transform-origin: 36px 36px 0;
+  //   height: 3rem;
+  // }
+  // @screen md {
+  // }
+  // @screen lg {
+  //   transform-origin: 45px 45px 0;
+  //   height: auto;
+  // }
+}
+
+.cubespinner h5 {
+  // position: absolute;
+  // height: 60px;
+  // text-align: center;
+  // max-width: max-content;
+
+  // @screen sm {
+  //   height: 72px;
+  // }
+
+  // @screen lg {
+  //   height: 90px;
+  // }
+}
+
+.cubespinner .face1 {
+  // transform: translateZ(30px);
+  -webkit-backface-visibility: hidden;
+
+  // @screen sm {
+  //   transform: translateZ(36px);
+  // }
+
+  // @screen lg {
+  //   transform: translateZ(45px);
+  // }
+}
+
+.cubespinner .face2 {
+  // transform: rotateX(120deg) translateZ(30px);
+  -webkit-backface-visibility: hidden;
+
+  // @screen sm {
+  //   transform: rotateX(120deg) translateZ(36px);
+  // }
+
+  // @screen lg {
+  //   transform: rotateX(120deg) translateZ(45px);
+  // }
+}
+
+// .cubespinner .face3 {
+//   transform: rotateX(240deg) translateZ(30px);
+//   -webkit-backface-visibility: hidden;
+
+//   @screen sm {
+//     transform: rotateX(240deg) translateZ(36px);
+//   }
+
+//   @screen lg {
+//     transform: rotateX(240deg) translateZ(45px);
+//   }
+// }
+
+@keyframes spincube {
+  100% {
+    transform: translateY(0rem);
+  }
+  75% {
+    transform: translateY(8rem);
+  }
+  50% {
+    transform: translateY(8rem);
+  }
+  25% {
+    transform: translateY(8rem);
+  }
+  0% {
+    transform: translateY(8rem);
+  }
+}
+
+.heading {
+  // padding: 8px;
+  // border: 1px solid #009090;
+  overflow: hidden;
+  // display: flex;
+  // max-height: 1.25rem;
+}
+h2 {
+  padding: 0;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.heading .animated {
+  // color: #008080;
+  // max-height: 2rem;
+  animation-name: spincube;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+}
+@keyframes spincube {
+  100% {
+    transform: translateY(0rem);
+  }
+
+  95% {
+    transform: translateY(-10.25rem);
+  }
+  80% {
+    transform: translateY(-10.75rem);
+  }
+  65% {
+    transform: translateY(-6.75rem);
+  }
+  60% {
+    transform: translateY(-7.25rem);
+  }
+  45% {
+    transform: translateY(-3.75rem);
+  }
+  40% {
+    transform: translateY(-4rem);
+  }
+  25% {
+    transform: translateY(-0.5rem);
+  }
+  20% {
+    transform: translateY(-1rem);
+  }
+  0% {
+    transform: translateY(0rem);
+  }
+}
+
+.MuiInputBase-root {
+  border-color: black;
+}

@@ -1,0 +1,17 @@
+export const goals = [
+    "Generative AI > Text",
+    "Generative AI > Image",
+    "Generative AI > Voice",
+    "Generative AI > Code",
+    "Langchain App",
+    "Autonomous Agent",
+    "Train/Fine Tune AI Model",
+    "ChatGPT Plugin Development",
+    "Enterprise AI Support",
+    "Data Classification",
+    "Data Annotation",
+    "Data Analysis",
+    "Structured Data Converter",
+    "Explore Pre-Built Apps",
+    "Others",
+]

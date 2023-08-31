@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: Poppins !important;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Sansita,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.input-border-gradient,
+.input-border-gradient {
+  background-image: linear-gradient(268.91deg, #fb3 14.72%, #fff 51.94%, #e300bd 82.34%, #ff006a 94.81%);
+  border-radius: inherit;
+  /* bottom: 0; */
+  content: var(--tw-content);
+  /* left: 0; */
+  /* margin: -0.125rem; */
+  /* position: absolute; */
+  /* right: 0; */
+  /* top: 0; */
+}
+
+.input-border-gradient:before {
+  z-index: -10;
+}
+
+.input-border-gradient {
+  background-color: rgb(0 0 0/1);
+}
+
+:after,
+:before {
+  --tw-content: ;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.DYXVr {
+  min-width: 100% !important;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  bottom: 50%;
+  width: 40px;
+}
+/* Used for the background effect in the landing page */
+.background {
+  background-image: radial-gradient(circle, rgba(58, 58, 58, 0.75) 2px, transparent 0px);
+  background-size: 30px 30px;
+  background-position:
+    0 0,
+    15px 15px;
+}
+
+.lower-gradient {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+  height: 20vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.fading-hr {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+}
+
+/* Used for code / table formatting within messages */
+pre {
+  @apply overflow-auto rounded-lg;
+}
+
+.window-heights {
+  @apply h-[14em] overflow-y-auto overflow-x-hidden sm:h-[17em] md:h-[22em] lg:h-[30em];
+}
+
+.link {
+  @apply cursor-pointer text-sky-500 underline hover:text-sky-300;
+}
+
+table {
+  @apply w-full rounded-lg text-white;
+  /* background-color: #0d1117; */
+}
+
+th,
+td {
+  /* @apply rounded-lg border border-gray-700 px-4 py-2; */
+}
+
+th {
+  /* background-color: #161b22; */
+}
+
+tr:nth-child(even) {
+  /* background-color: #1c2028; */
+}
+
+/* Customize website's scrollbar like Mac OS
+Not supports in Firefox and IE */
+/* total width */
+div::-webkit-scrollbar {
+  border-radius: 16px;
+  background-color: #464649;
+  width: 16px;
+}
+
+/* background of the scrollbar except button or resizer */
+div::-webkit-scrollbar-track {
+  border-radius: 16px;
+  background-color: #464649;
+}
+
+/* scrollbar itself */
+div::-webkit-scrollbar-thumb {
+  background-color: #babac0;
+  border-radius: 16px;
+  border: 2px solid #464649;
+}
+
+/* set button(top and bottom of the scrollbar) */
+div::-webkit-scrollbar-button {
+  display: none;
+}
+
+/*  disappearing animation */
+.animation-hide {
+  animation: hide 1s cubic-bezier(0.4, 0, 0.2, 1) 0s 1 forwards;
+}
+
+.MuiAccordion-root:hover {
+  background-color: black;
+}
+
+.MuiListItemButton-root:hover {
+  background-color: black;
+}
+
+.toggle-button {
+  position: relative;
+  width: 40px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.slider {
+  /* position: absolute; */
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggle-button.on .slider {
+  transform: translateX(16px);
+}
+
+.toggle-button.on {
+  background-color: #fec200; /* Yellow background for "on" state */
+}
+
+.css-1abgi4w-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: #202224;
+}
+.css-1i5jzbk-MuiTabs-indicator {
+  background-color: #fec200;
+}
+.css-5olati-MuiDataGrid-root .MuiDataGrid-row {
+  border-top: 1px solid #d7d7d7;
+}
+.css-9nmuik-MuiInputBase-input-MuiOutlinedInput-input.MuiInputBase-inputSizeSmall {
+  font-size: 12px;
+}
+.css-1le5hc7-MuiInputBase-input-MuiOutlinedInput-input.MuiInputBase-inputSizeSmall {
+  font-size: 12px;
+}
+/* .css-zp3dml-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-zp3dml-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-zp3dml-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  display: flex;
+} */
+/* .css-mgs850-MuiToggleButtonGroup-root .MuiToggleButtonGroup-grouped:first-of-type {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.css-mgs850-MuiToggleButtonGroup-root .MuiToggleButtonGroup-grouped:last-of-type {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+} */
+/* .css-13lkpsi-MuiButtonBase-root-MuiToggleButton-root.Mui-selected {
+  color: #fec200;
+  background-color: #717579;
+}
+.css-13lkpsi-MuiButtonBase-root-MuiToggleButton-root.Mui-selected:hover {
+  color: #fec200;
+  background-color: #717579;
+} */
